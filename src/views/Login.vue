@@ -60,7 +60,6 @@
                 logging: false,
                 error: false,
                 info: '',
-
                 password: ''
             }
         },
@@ -245,6 +244,7 @@
     }
 
     #password.error {
+        border-bottom: solid 3px !important;
         border-bottom-color: $error-color !important;
     }
 
@@ -257,7 +257,7 @@
     #info {
         color: rgba(255, 255, 255, 0.875);
 
-        font-family: 'Lato', 'Noto Sans', sans-serif;
+        font-family: 'Inter';
         font-size: 22px;
         font-weight: 300;
 
