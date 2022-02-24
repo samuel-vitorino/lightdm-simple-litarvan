@@ -1,6 +1,6 @@
 # Simple Litarvan's LightDM WebKit2 theme
 
-# [Live testing](https://litarvan.github.io/lightdm-webkit-theme-litarvan/)
+# [Live testing](https://samuel-vitorino.github.io/lightdm-simple-litarvan/)
 
 # Installation
 
@@ -20,12 +20,6 @@ Will generate a lightdm-webkit-theme-litarvan-3.2.0.tar.gz in the current folder
 
 # Screenshots
 
-![Setup screenshot](https://litarvan.github.io/lightdm-webkit-theme-litarvan/setup_view.png)
+![Splash screenshot](https://samuel-vitorino.github.io/lightdm-simple-litarvan/splash_view.png)
 
-![Splash screenshot](https://litarvan.github.io/lightdm-webkit-theme-litarvan/splash_view.png)
-
-![Login screnshot](https://litarvan.github.io/lightdm-webkit-theme-litarvan/login_view.png)
-
-![Desktops screenshot](https://litarvan.github.io/lightdm-webkit-theme-litarvan/desktops_view.png)
-
-![Theming screenshot](https://litarvan.github.io/lightdm-webkit-theme-litarvan/theming_view.png)
+![Login screnshot](https://samuel-vitorino.github.io/lightdm-simple-litarvan/login_view.png)
