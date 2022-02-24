@@ -1,5 +1,7 @@
 # Simple Litarvan's LightDM WebKit2 theme
 
+A simpler version of Litarvan's LightDM WebKit2 theme without Setup, Desktop Environment selection and with a smaller and centered login form.
+
 # [Live testing](https://samuel-vitorino.github.io/lightdm-simple-litarvan/)
 
 # Installation
