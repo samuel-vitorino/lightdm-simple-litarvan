@@ -1,5 +1,5 @@
 <template>
-    <div class="item" :class="{ 'user': mode === 'user', 'desktop': mode === 'desktop', 'selected': selected }" v-theming="['border-bottom-color']" v-italic @click="select()">
+    <div class="item" :class="{ 'user': mode === 'user', 'desktop': mode === 'desktop', 'selected': selected }" v-theming="['border-bottom-color']" @click="select()">
         <div class="icon-container" v-if="!noicon">
             <img class="icon" :src="icon()" />
         </div>
@@ -90,7 +90,7 @@
 
 <style lang="scss" scoped>
     .item {
-        font-family: 'Lato', 'Noto Sans', sans-serif;
+        font-family: "Inter";
 
         border-radius: 5px;
         transition: background-color 125ms ease-in-out;
@@ -109,8 +109,8 @@
     }
 
     .item.desktop {
-        font-weight: 300;
-        font-size: 44px;
+        font-weight: 400;
+        font-size: 20px;
 
         padding: 7px 19px;
         margin-bottom: 20px;
@@ -118,7 +118,7 @@
 
     .item.user {
         font-weight: 300;
-        font-size: 42px;
+        font-size: 30px;
 
         padding: 3px 18px 8px;
 

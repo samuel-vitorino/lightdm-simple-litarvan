@@ -11,20 +11,16 @@
                 <l-select-item mode="user" :item="settings.user" @select="!immutable && $router.push('/base/select/user')" :noicon="true" />
 
                 <form v-if="!immutable" @submit.prevent="submit">
-                    <input id="password" type="password" v-model="password" :placeholder="passwordLabel" :readonly="logging" :class="{'error': error}" v-theming="['border-bottom-color']" v-italic.custom />
+                    <input id="password" type="password" v-model="password" :placeholder="passwordLabel" :readonly="logging" :class="{'error': error}" v-theming="['border-bottom-color']" />
                 </form>
                 <div v-else id="password" class="immutable"></div>
-                <div id="info" v-italic>
+                <div id="info">
                     {{ info }}
                 </div>
-
-                <l-select-item mode="desktop" :item="settings.desktop" @select="!immutable && $router.push('/base/select/desktop')" />
             </div>
         </div>
 
         <div v-if="!immutable">
-            <l-power-button id="settings" type="settings"></l-power-button>
-
             <transition name="power-fade">
                 <div id="power-list" v-if="powerList">
                     <l-power-button v-if="canHibernate" id="hibernate" type="hibernate"></l-power-button>
@@ -181,13 +177,10 @@
     }
 
     #login-content {
-        margin-top: 11.5vh;
-    }
-
-    @media (min-height: 850px) {
-        #login-content {
-            margin-top: 14vh;
-        }
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     #login-content.no-avatar {
@@ -203,11 +196,12 @@
     }
 
     #avatar-image {
-        height: 200px;
+        width: 80px;
+        height: 80px;
     }
 
     .round {
-        border-radius: 100px;
+        border-radius: 50%;
     }
 
     .item.user {
@@ -216,6 +210,7 @@
 
     #password {
         font-weight: 300;
+        font-family: "Inter";
     }
 
     #password, #password:focus {
@@ -232,7 +227,7 @@
     }
 
     #password {
-        margin-top: 4.5vh;
+        margin-top: 2.5vh;
 
         background: $password-field-background;
         caret-color: $password-field-caret;
@@ -242,13 +237,11 @@
         padding-right: 15px;
         font-size: 24px;
 
-        width: 400px;
+        width: 300px;
         height: 54px;
 
         border: none;
-        border-bottom: solid 3px;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
+        border-radius: 4px;
     }
 
     #password.error {

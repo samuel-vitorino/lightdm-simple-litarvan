@@ -70,8 +70,8 @@
 <style lang="scss" scoped>
     .clock {
         font-size: 164px;
-        font-weight: 300;
-        font-family: 'Lato', 'Noto Sans', sans-serif;
+        font-weight: bold;
+        font-family: 'Inter';
         line-height: 1.1;
 
         text-align: center;
@@ -85,12 +85,6 @@
             font-size: 24px;
             margin-top: 1.8vh;
         }
-    }
-
-    #hours {
-        font-weight: normal;
-        /*font-weight: bold;
-        font-size: 156px;*/
     }
 
     #part {

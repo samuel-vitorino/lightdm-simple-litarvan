@@ -11,10 +11,10 @@ export let settings = (local ? JSON.parse(local) : null) || {
     blur: 'fixed',
 
     disableSplash: false,
-    disableSplashText: false,
-    disableIntro: false,
+    disableSplashText: true,
+    disableIntro: true,
     disableFade: false,
-    roundAvatar: false,
+    roundAvatar: true,
     disableAvatar: false,
     disableZoom: false,
     clock12: false,
@@ -48,7 +48,7 @@ export function save(s) {
 
 export function avatar(avatar) {
     if (!avatar || avatar === '') {
-        return require('./assets/images/default_user.png');
+        return require('./assets/images/default_user.jpg');
     }
 
     if (avatar === 'litarvan') {
