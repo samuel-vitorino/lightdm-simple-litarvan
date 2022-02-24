@@ -70,7 +70,7 @@
 
     #power-text {
         font-family: 'Inter';
-        font-weight: normal;
+        font-weight: bold;
         color: $outer-foreground;
         font-size: 58px;
     }
