@@ -1,20 +1,20 @@
 <template>
     <div id="intro">
-        <transition name="logo-fade">
+        <div class="bg blurred fixed absolute" :style="{ 'background-image': 'url(' + background + ')' }">
+        </div>
             <div id="content" v-if="show">
                 <img v-if="state === 'initial'" id="logo" src="../assets/images/os.png" />
-                <p v-else id="power-text" v-italic>
-                    <img id="power-icon" :src="require('../assets/images/' + state + '.svg')" />
+                <p v-else id="power-text">
                     {{ text }}
                 </p>
             </div>
-        </transition>
     </div>
 </template>
 
 <script>
     import { trans } from '@/translations';
     import { settings } from '@/settings';
+    import { background } from '@/themer';
 
     export default {
         name: 'l-intro',
@@ -41,6 +41,7 @@
 
         data() {
             return {
+                background,
                 show: false,
                 state: this.$route.params.state,
                 text: trans(this.$route.params.state)
@@ -53,8 +54,6 @@
     @import '../theme';
 
     #intro {
-        background-color: $outer-background;
-
         display: flex;
         align-items: center;
         text-align: center;
@@ -70,7 +69,7 @@
     }
 
     #power-text {
-        font-family: 'Lato', 'Noto Sans', serif;
+        font-family: 'Inter';
         font-weight: normal;
         color: $outer-foreground;
         font-size: 58px;
@@ -89,5 +88,31 @@
 
         margin-bottom: -5px;
         margin-right: 4px;
+    }
+
+    .bg {
+        background-size: cover;
+        left: 0;
+        right: 0;
+
+        display: block;
+        width: 100%;
+        height: 100vh;
+
+        z-index: -1;
+
+        color: $secondary-color;
+
+        &.absolute {
+            position: absolute;
+        }
+
+        &.fixed {
+            position: fixed;
+        }
+        
+        &.blurred {
+            filter: blur(10px);
+        }
     }
 </style>

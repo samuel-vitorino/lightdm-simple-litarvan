@@ -21,13 +21,11 @@
         </div>
 
         <div v-if="!immutable">
-            <transition name="power-fade">
-                <div id="power-list" v-if="powerList">
-                    <l-power-button v-if="canHibernate" id="hibernate" type="hibernate"></l-power-button>
-                    <l-power-button v-if="canSuspend" id="suspend" type="suspend"></l-power-button>
-                    <l-power-button id="reboot" type="restart"></l-power-button>
-                </div>
-            </transition>
+            <div id="power-list" v-if="powerList">
+                <l-power-button v-if="canHibernate" id="hibernate" type="hibernate"></l-power-button>
+                <l-power-button v-if="canSuspend" id="suspend" type="suspend"></l-power-button>
+                <l-power-button id="reboot" type="restart"></l-power-button>
+            </div>
 
             <div @click="powerList = !powerList">
                 <l-power-button id="shutdown" type="shutdown" :disabled="!powerList"></l-power-button>
