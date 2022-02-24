@@ -16,7 +16,7 @@
 $ ./build.sh
 ```
 
-Will generate a lightdm-webkit-theme-litarvan-3.2.0.tar.gz in the current folder.
+Will generate a lightdm-webkit-theme-simple-litarvan-3.2.0.tar.gz in the current folder.
 
 # Screenshots
 
