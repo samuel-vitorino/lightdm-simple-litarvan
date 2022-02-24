@@ -7,7 +7,7 @@
 ## Arch Linux (3.0.0)
 
 * If not already done, edit `/etc/lightdm/lightdm.conf` and set `greeter-session=lightdm-webkit2-greeter` .
-* Build and extract the `lightdm-webkit-theme-simple-litarvan-3.2.0.tar.gz` to `/usr/share/lightdm-webkit/themes/simple-litarvan/` .
+* Build and extract `lightdm-webkit-theme-simple-litarvan-3.2.0.tar.gz` to `/usr/share/lightdm-webkit/themes/simple-litarvan/` .
 * Then edit `/etc/lightdm/lightdm-webkit2-greeter.conf` and set `theme` or `webkit-theme` to `simple-litarvan` .
 
 # Building (3.2.0)

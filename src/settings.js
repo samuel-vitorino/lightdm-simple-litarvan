@@ -1,10 +1,4 @@
-let local = localStorage.getItem('settings');
-
-if (local === 'undefined') {
-    local = null;
-}
-
-export let settings = (local ? JSON.parse(local) : null) || {
+export let settings = {
     first: true,
 
     mode: 'classic',
